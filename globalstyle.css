@@ -1,0 +1,99 @@
+body{
+background:rgb(200,200,200) url(pattern.png) repeat top left 40px;
+/* background: repeating-linear-gradient(-45deg, transparent rgb(41,104,159) 50px);
+ */}
+ 
+ .global{
+ display:center;
+ margin:0px 200px 0px 200px;
+ padding:40px 0px 0px 0px;
+ background-color:white;
+ }
+ 
+.right,.left{
+display:inline-block;
+padding:30px;
+background-color:white;
+height:50;
+width:50%;
+}
+.label{
+margin:0px 40px 0px 40px;
+background-image:url(Lable1.png);
+background-repeat:no-repeat;
+width:199px;
+height:170px;
+
+}
+.l1,.l2,.l3{
+text-transform: uppercase;
+text-align:center;
+line-height:1px;
+color:black;
+margin:28px;
+}
+.l1{
+font-family:"CENTURY GOTHIC";
+font-size:31.5px;
+margin-bottom:32px;
+}
+.l2{
+font-weight: bold;
+font-family:fantasy;
+font-size:35px;
+}
+.l3{
+font-weight: bold;
+font-family:"tahoma";
+font-size:13px;
+line-height:1px;
+font-variant: small-caps;
+}
+h2 {
+	text-transform: uppercase;
+    overflow: hidden;
+	color:rgb(61,108,176);
+	font-weight: bold;
+	font-family:fantasy;
+	display: inline-block;
+	margin:0px 0px 14px 8px;
+}
+
+h2:after {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 3px solid rgb(61,108,176);
+}
+.prof,.cont,.skill,.educ,.exper,.soft{
+display:inline-block;
+background-repeat:no-repeat;
+width:60px;
+height:60px;
+}
+
+.prof{
+background: url(profile.png);
+}
+.cont{
+background: url(phone.png);
+}
+.skill{
+background: url(skills.png);
+}
+.educ{
+background: url(education.png);
+}
+.exper{
+background: url(experience.png);
+}
+.soft{
+background: url(software.png);
+}
+p span{
+font-weight: bold;
+}
