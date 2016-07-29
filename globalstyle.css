@@ -1,21 +1,34 @@
 body{
-background:rgb(200,200,200) url(pattern.png) repeat top left 40px;
+background:url(^0FFEAE0B33DB4BCA9009F6FABE019C78E623DF4993D475BD7B^pimgpsh_fullsize_distr.jpg);
+background-repeat:no-repeat;
+width:100%;
 /* background: repeating-linear-gradient(-45deg, transparent rgb(41,104,159) 50px);
  */}
  
  .global{
- display:center;
- margin:0px 200px 0px 200px;
- padding:40px 0px 0px 0px;
- background-color:white;
- }
+  /* display:inline; */ 
+  width:100%;
+  height:100%;
+/*  margin:0px 200px 0px 200px;
+  padding:40px 0px 0px 0px;*/
+/*  background-color:white;
+ */ 
+ /*width:100%;
+ */
+ } 
  
 .right,.left{
-display:inline-block;
-padding:30px;
-background-color:white;
-height:50;
-width:50%;
+ display:inline-block;
+ padding:40px;
+/* background-color:white;
+ */
+}
+.left{
+	width:33%;
+}
+.right{
+padding-left:20px;
+width:45%;
 }
 .label{
 margin:0px 40px 0px 40px;
@@ -51,12 +64,14 @@ font-variant: small-caps;
 }
 h2 {
 	text-transform: uppercase;
-    overflow: hidden;
-	color:rgb(61,108,176);
+/*     overflow: hidden;
+ */	color:rgb(61,108,176);
 	font-weight: bold;
-	font-family:fantasy;
+	font-family:"CENTURY GOTHIC";
+	font-size:32px;
 	display: inline-block;
-	margin:0px 0px 14px 8px;
+/* 	margin:0px 200px 24px 20px;*/
+	margin-left:8px;
 }
 
 h2:after {
@@ -67,11 +82,11 @@ h2:after {
     width: 100%;
     margin-right: -100%;
     margin-left: 10px;
-    border-top: 3px solid rgb(61,108,176);
+    border-top: 4px solid rgb(61,108,176);
 }
 .prof,.cont,.skill,.educ,.exper,.soft{
-display:inline-block;
-background-repeat:no-repeat;
+ display:inline-block;
+ background-repeat:no-repeat;
 width:60px;
 height:60px;
 }
@@ -96,4 +111,82 @@ background: url(software.png);
 }
 p span{
 font-weight: bold;
+}
+
+li{
+	font-size:18px;
+	font-family:"CENTURY GOTHIC";
+	font-weight:100;
+}
+
+li span{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.blue{
+	color:rgb(61,108,176);
+}
+
+li p{
+	font-size:12px;
+}
+h4{
+	text-transform: uppercase;
+	text-align:center;
+}
+h5{
+	text-transform: uppercase;
+	color:rgb(61,108,176);
+	font-family:"CENTURY GOTHIC";
+	font-size:16px;
+}
+.table{
+	display:table;
+	width:350px;
+	border-bottom:none;
+	line-height:1px;
+}
+.cell{
+	display:table-cell;
+	padding:1px
+	
+}
+.row{
+	display:table-row;	
+}
+
+.pd p{
+	font-size:13px;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 10px;
+    margin-bottom: 10xp;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+
+progress{
+	width:222px;
+	height:16px;
+} 
+
+progress[value]{
+	color:rgb(61,108,176);
+}
+progress[max]{
+	color:rgb(41,104,159);
+}
+
+.cell span{
+	text-transform: uppercase;
+	color:rgb(61,108,176);
+	font-family:"CENTURY GOTHIC";
+	font-weight: bold;
+	margin:10px;
+	line-height:25px;
 }
