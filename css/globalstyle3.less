@@ -1,12 +1,5 @@
-body{
-/* background:url(^0FFEAE0B33DB4BCA9009F6FABE019C78E623DF4993D475BD7B^pimgpsh_fullsize_distr.jpg); */
-background-color:white;
-background-repeat:no-repeat;
-width:100%;
-margin:0px;
-}
 /* font-family: "MyriadProRegular"; */
- @font-face {
+@font-face {
     font-family: "MyriadProRegular";
     src: url(../fonts/MyriadProRegular/MyriadProRegular.eot);
     src: url(../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix)format("embedded-opentype"),
@@ -41,72 +34,81 @@ margin:0px;
     font-style: normal;
     font-weight: normal;
 }
+@base-color:rgb(61,108,176);
 
-
- .global{
+p{
+	font-family:"MyriadProRegular";
+	overflow: hidden;
+	float:left;
+}
+.container-fluid{
+	width:1000px;
+	margin:0 auto;
+	min-height:calc(100vh - 70px);
+}
+/* .global{
  
   width:1000px;
-  /* height:100%; */
+  /* height:100%; 
   margin:0 auto;
   min-height:calc(100vh - 70px);
- } 
+ }  */
  
- .container{
+ .col-sm-12{
 	float:left;
 	width:50%;
 	overflow:hidden;
  }
  
- 
- 
- p{
- margin:0px;
- 
- }
 
-.label{
+.icon {
 position:relative;
-/* margin:5px 5px 5px 86px; */
 margin: 0 auto;
 border-radius:90px;
-border:1px solid rgb(61,108,176);
+border:1px solid @base-color;
 width:180px;
 height:180px;
-/* float:left; */
-}
-
-.label div{
+	div{
+	
 	position:absolute;
-	border-radius:76px;
-	background-color:rgb(61,108,176);
+	border-radius:80px;
+	background-color:@base-color;
 	width:160px;
 	height:160px;
-	top:10px;
-	left:10px;
-}
-.info h1,.info h4{
-	text-transform: uppercase;
-	text-align:center;
-	line-height:28px;
-	font-family:"MyriadProBold";
-	width:100%;
-	margin:2px;
-}
-.info h1:first-child{
-	font-family:"MyriadPro-Light";
+	top:9px;
+	left:9px;
+	
+	}
 }
 
-/* .profile-div{
-margin-left: 1px;
-float:left;
-width:50%;
+ .info{
+	h1,h4 {
+	
+		text-transform: uppercase;
+		text-align:center;
+		line-height:28px;
+		font-family:"MyriadProBold";
+		width:100%;
+		margin:2px;
+		
+	}
+	
+	h1:first-child{
+	
+	font-family:"MyriadPro-Light";
+	
+	}
+} 
+/* .info h1:first-child{
+	font-family:"MyriadPro-Light";
 } */
+
 h2 {
 	overflow:hidden;
 	text-overflow:ellipsis;
 	text-transform: uppercase;
 	display:inline-block;
- 	color:rgb(61,108,176);
+ 	color: @base-color;
 	font-family:"MyriadProBold";
 	font-size:33px;
 	/* margin-left:8px; */
@@ -120,12 +122,7 @@ h2 {
 	float:left; 
 	font-weight:bold;
 }
-/* .h2{
-	
-} */
-/* .right div h2{
-	margin-left:15px;
-} */
+
 
 h2:after {
     content:"";
@@ -136,7 +133,7 @@ h2:after {
     /* margin-right: -100%; */
 	/* float:left; */
     margin-left: 3px;
-	background:rgb(61,108,176);
+	background:@base-color;
     /* border-top: 4px solid rgb(61,108,176); */
 }
 
@@ -154,6 +151,7 @@ h2:before{
 	width: 100%;
 	display:inline-block;
 	white-space:nowrap;
+	
 } 
 /* .contact{
 width:194px;
@@ -168,48 +166,59 @@ width:194px;
 /* .profile,.contact,.skills h2:after{
 	
 } */
-.profile h2:before{
-	background: url(../images/profile-label.png);
+.content-image(){
 	border-radius:30px;
 	border:1px solid rgb(2,113,187);
+}
+
+.profile h2:before{
+	 background: url(../images/profile-label.png);
+	 .content-image
+	/* border-radius:30px;
+	border:1px solid rgb(2,113,187);
 	width:60px;
-	height:59px;
+	height:59px; */
 }
 .contact h2:before{
 	 background: url(../images/phone-label.png);
-	 border-radius:30px;
+	 .content-image
+	 /* border-radius:30px;
 	border:1px solid rgb(2,113,187);
 	width:60px;
-	height:59px;
+	height:59px; */
 }
 .skills h2:before{
 	background: url(../images/skills-label.png);
-	border-radius:30px;
+	.content-image
+	/* border-radius:30px;
 	border:1px solid rgb(2,113,187);
 	width:60px;
-	height:59px;
+	height:59px; */
 }
 .education h2:before{
 	background: url(../images/education-label.png);
-	border-radius:30px;
+	.content-image
+	/* border-radius:30px;
 	border:1px solid rgb(2,113,187);
 	width:60px;
-	height:59px;
+	height:59px; */
 }
 
 .experience h2:before{
 	background: url(../images/experience-label.png);
-	border-radius:30px;
+	.content-image
+	/* border-radius:30px;
 	border:1px solid rgb(2,113,187);
 	width:60px;
-	height:59px;
+	height:59px; */
 }
 .soft h2:before{
 	background: url(../images/software-label.png);
-	border-radius:30px;
+	.content-image
+	/* border-radius:30px;
 	border:1px solid rgb(2,113,187);
 	width:60px;
-	height:59px;
+	height:59px; */
 }
 /* .profile-div p{
 	font-family:"MyriadProRegular";
@@ -221,7 +230,7 @@ width:194px;
 	font-size:13px;
 } */
 
-.container p{
+/* .col-sm-12 p{
 	font-family:"MyriadProRegular";
 	overflow: hidden;
 	float:left;
@@ -229,7 +238,7 @@ width:194px;
     line-height: 15px;
     width: 80%;
 	font-size:13px;
-}
+} */
 
 p span{
 	font-family:"MyriadProBold";
@@ -245,6 +254,17 @@ ul {
     padding-left: 35px;
 	width:auto;
 	float:left;
+	
+	h4{
+	
+	text-transform: uppercase;
+	font-size:22px;
+	font-family:"MyriadPro-Light";
+	margin-left:15px;
+	line-height:1px;
+	margin:20px;
+	
+	}
 }
 
 li{
@@ -257,7 +277,15 @@ li{
 	margin-left:1.5px;
 	size:20px;
 	
-	
+	span{
+	text-transform: uppercase;
+	font-weight: bold;
+	}
+
+	p{
+	font-size:12px;
+	margin:7px 2px 2px 20px;
+	}
 }
 /*   .education-div ul li:before,.experience-div ul li:before{
 	float:clear;
@@ -291,10 +319,10 @@ li span{
 	font-weight: bold;
 }
 
-li p{
+/* li p{
 	font-size:12px;
 	margin:7px 2px 2px 20px;
-}
+} */
 h3{
 	text-transform: uppercase;
 	text-align:center;
@@ -341,25 +369,24 @@ h3{
 	margin-bottom:20px;
 } 
 
-.progress-80{
-	background-color:rgb(61,108,176);
-	width:80%;
+.proress-value(@value){
+	background-color:@base-color;
+	width:@value;
 	height:16px;
 }
+
+.progress-80{
+	.proress-value(80%);
+}
+
 .progress-70{
-	background-color:rgb(61,108,176);
-	width:70%;
-	height:16px;
+	.proress-value(70%);
 }
 .progress-60{
-	background-color:rgb(61,108,176);
-	width:60%;
-	height:16px;
+	.proress-value(60%);
 }
 .progress-50{
-	background-color:rgb(61,108,176);
-	width:50%;
-	height:16px;
+	.proress-value(50%);
 }
 
 .blue,.black{
@@ -367,31 +394,38 @@ h3{
 	text-overflow:ellipsis;
 	color:rgb(61,108,176);
 	text-transform: uppercase;
-	font-size:26px;
+	font-size:22px;
 	font-family:"MyriadProBold";
 	margin-left:20px;
 	widows:100%;
+	
+	&:after{
+		content:"//Feb 2011-Jun 2014";
+	font-family:"MyriadPro-Light";
+	color:black;
+	margin-left:15px;
+	}
 } 
 .black{
 	color:black;
 }
-.blue:after,.black:after{
+/* .blue:after,.black:after{
 	content:"//Feb 2011-Jun 2014";
 	font-family:"MyriadPro-Light";
 	color:black;
 	margin-left:15px;
-}
-ul h4{
+} */
+/* ul h4{
 	text-transform: uppercase;
 	font-size:26px;
 	font-family:"MyriadPro-Light";
 	margin-left:15px;
 	line-height:1px;
 	margin:20px;
-}
+} */
 /* .contact-div{
 
-	/* margin-top:-400px; */
+	/* margin-top:-400px; 
 	float:left;
 	/* width: 338px; 
 	width:50%;
@@ -401,7 +435,7 @@ ul h4{
 	margin-top:29px;
 } */
 
-.container h2{
+.col-sm-12 h2{
 	margin-top:29px;
 }
 
@@ -414,16 +448,35 @@ ul h4{
 } */
 .circle-bar{
 float:left;
-}
-.skills-div .table{
-padding-top:0px;
+
+	ul{
+		padding-left:35px;
+	}	
+	
+	li {
+	  width: 15px;
+	  height: 15px;
+	  text-align: center;
+	  line-height: 20px;
+	  border-radius: 10px;
+	  background: dodgerblue;
+	  margin: 0 1.5px;
+	  display: inline-block;
+	  color: white;
+	  position: relative;
+	  }
+	  
+	  &:first-child::before {
+		display: none;
+	}
 }
 
- .container{
+
+ .col-sm-12{
 	padding-top:0px;
 } 
 
-.circle-bar ul{
+/* .circle-bar ul{
 padding-left:35px;
 }
 .circle-bar li {
@@ -438,10 +491,10 @@ padding-left:35px;
   color: white;
   position: relative;
   }
-
-.circle-bar li:first-child::before {
+ */
+/* .circle-bar li:first-child::before {
   display: none;
-}
+} */
 
 .active {
   background: dodgerblue;
@@ -475,30 +528,12 @@ footer a{
 	width: 500px;
     height: 60px;
 } 
-/*  .education-div,.experience-div{
-	/* margin-left:25px;
-	float:left;
-	/* width:500px;
-	width:50%;
-} */
 
-/* .info{
-	/* float:left; 
-	margin: 0px 40px 0px 40px;
-	width:268px;
-} */
 .info-label{
 float:left;
 width:50%;
 }
-/*  input{
-	border:none;
-	
-} */ 
-/* input[placeholder]{border:none;text-overflow:ellipsis; color:black;} 
-input::-moz-placeholder     {text-overflow:ellipsis; -moz-placeholder:color:black} 
-input:-moz-placeholder{border:none;text-overflow:ellipsis; color:black}
- :-ms-input-placeholder {text-overflow:ellipsis; color:black}    */
+
 .link-lookalike {
     background: none;
     border: none;
