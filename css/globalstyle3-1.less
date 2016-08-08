@@ -35,13 +35,24 @@
     font-weight: normal;
 }
 @base-color:rgb(61,108,176);
+@base-border:1px solid ;
 
+.base-font(){
+	text-transform: uppercase;
+	font-family:"MyriadProBold";
+}
 .circle(@width-height;@color: rgb(2,113,187)){
 	width:@width-height;
 	height:@width-height;
 	border-radius:@width-height / 2;
-	border:1px solid @color;
+	border:@base-border @color;
+/* 	box-shadow:1px @color; */
 }
+ 
+ .inline-float(){
+	display:inline-block;
+	float:left;
+ }
  
 p{
 	font-family:"MyriadProRegular";
@@ -51,13 +62,17 @@ p{
 .container-fluid{
 	width:1000px;
 	margin:0 auto;
-	min-height:calc(100vh - 70px);
+	min-height: calc(~"100vh - 70px");
 }
 
+.info-label{
+float:left;
+width:50%;
+} 
  
  .col-sm-12{
-	float:left;
-	width:50%;
+
+	&:extend(.info-label);
 	overflow:hidden;
 	padding-top:0px;
 	
@@ -83,11 +98,9 @@ p{
 
  .info{
 	h1,h4 {
-	
-		text-transform: uppercase;
+		.base-font;
 		text-align:center;
 		line-height:28px;
-		font-family:"MyriadProBold";
 		width:100%;
 		margin:2px;
 		
@@ -100,39 +113,34 @@ p{
 	}
 } 
 
-.info-label{
-float:left;
-width:50%;
-}
 
 h2 {
 
-	overflow:auto;
+	overflow:hidden;
 	text-overflow:ellipsis;
-	text-transform: uppercase;
+	.base-font;
+	.inline-float;
  	color: @base-color;
-	font-family:"MyriadProBold";
 	font-size:33px;
-	margin-bottom:0px;
-	margin-top:8px;
-	display:inline-block;
+/* 	margin-bottom:0px;
+	margin-top:8px; */
+	margin:8px 0px 0px;
 	max-width:300px;
 	white-space:nowrap;
 	vertical-align:middle;
-	float:left;
 	font-weight:bold;
 }
 
 
 h2:before{
 	content: "";
-    display: inline-block;
     width: 62px;
     height: 62px;
-    float: left;
-    margin: 0 16px 0 0;
+	margin: 0 16px 0 0;
+	.inline-float;
 }
-.profile,.contact,.skills,.education,.experience,.soft{
+
+ .profile,.contact,.skills,.education,.experience,.soft{
 	overflow:hidden;
 	background-repeat:no-repeat;
 	width: 100%;
@@ -148,7 +156,7 @@ h2:before{
 		background:@base-color;
 		margin-top:50px;
 	}
-} 
+}  
 .content-image(@url){
 	background: url("../images/@{url}");
 	.circle(62px);
@@ -158,19 +166,24 @@ h2:before{
 	 .content-image("profile-label.png");
 }
 .contact h2:before{
+
 	 .content-image("phone-label.png")
 }
 .skills h2:before{
+
 	.content-image("skills-label.png")
 }
 .education h2:before{
+
 	.content-image("education-label.png")
 }
 
 .experience h2:before{
+
 	.content-image("experience-label.png")
 }
 .soft h2:before{
+
 	.content-image("software-label.png")
 }
 
@@ -179,11 +192,11 @@ p span{
 }
 
 ul {
-    display: inline-block;
+
+	.inline-float;
 	overflow:hidden;
 	margin: 20px 0px 24px; 
 	width:100%;
-	float:left;
 	
 	h4{
 	
@@ -236,9 +249,9 @@ h3{
 	margin:4px;
 }
 .h5{
-	text-transform: uppercase;
-	color:rgb(61,108,176);
-	font-family:"MyriadProBold";
+
+	.base-font;
+	color:@base-color;
 	font-size:16px;
 }
 .table{
@@ -288,24 +301,30 @@ h3{
 	.proress-value(50%);
 }
 
-.blue,.black{
+.blue{
 	overflow:hidden;
 	text-overflow:ellipsis;
-	color:rgb(61,108,176);
-	text-transform: uppercase;
+	color:@base-color;
+	.base-font;
 	font-size:22px;
-	font-family:"MyriadProBold";
 	margin-left:20px;
-	widows:100%;
-	
+	widows:100;
 	&:after{
 		content:"//Feb 2011-Jun 2014";
-	font-family:"MyriadPro-Light";
-	color:black;
-	margin-left:15px;
+		font-family:"MyriadPro-Light";
+		color:black;
+		margin-left:15px;
 	}
+	
 } 
 .black{
+	&:extend(.blue);
+	&:after{
+		content:"//Feb 2011-Jun 2014";
+		font-family:"MyriadPro-Light";
+		color:black;
+		margin-left:15px;
+	}
 	color:black;
 }
 
@@ -319,11 +338,10 @@ h3{
 	}	
 	
 	li {
-	  width: 15px;
-	  height: 15px;
+
+	  .circle(15px,none);
 	  text-align: center;
 	  line-height: 20px;
-	  border-radius: 10px;
 	  background: dodgerblue;
 	  margin: 0 1.5px;
 	  display: inline-block;
@@ -337,17 +355,16 @@ h3{
 }
 
 .active {
-  background: dodgerblue;
+	background: dodgerblue;
+  
+  ~li {
+	background: lightblue;
+	}
+  
+  ~li::before {
+	background: lightblue;
+	}
 }
-
-.active ~li {
-  background: lightblue;
-}
-
-.active ~li::before {
-  background: lightblue;
-}
-
 
 .link-lookalike {
     background: none;
